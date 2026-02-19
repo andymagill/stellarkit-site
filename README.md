@@ -1,6 +1,6 @@
 # StellarKit Reference Site
 
-A fully functional marketing site implementation using `@stellarkit/core` and styled with **Tailwind CSS v4**.
+A fully functional marketing site implementation using `@stellar-kit/core` and styled with **Tailwind CSS v4**.
 
 This serves as the blueprint for creating new marketing and product-validation sites with StellarKit.
 
@@ -81,7 +81,7 @@ All commands are run from the project root:
 
 ## 📦 Core Integration
 
-This site imports components and utilities from `@stellarkit/core`:
+This site imports components and utilities from `@stellar-kit/core`:
 
 - **BaseLayout:** Base HTML shell with head/body structure
 - **SEO:** Meta tag management via `SEO.astro` component

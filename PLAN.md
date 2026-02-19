@@ -5,7 +5,7 @@
 | Phase | Focus | Key Deliverable | Status |
 | :---- | :---- | :---- | :---- |
 | **Phase 0: Repository Setup** | GitHub repo creation & local dev linking | `stellarkit-core` + `stellarkit-site` repos | ✅ COMPLETE |
-| **Phase 1: Foundation** | Core architecture & Core APIs | `@stellarkit/core` (v0.1.0) | ✅ COMPLETE |
+| **Phase 1: Foundation** | Core architecture & Core APIs | `@stellar-kit/core` (v0.1.0) | ✅ COMPLETE |
 | **Phase 2: Validation** | Reference Site implementation | `stellarkit-site` | ✅ MOSTLY COMPLETE* |
 | **Phase 3: Automation** | CI/CD & Publishing pipeline | Automated pnpm/Cloudflare flows | ✅ MOSTLY COMPLETE** |
 | **Phase 4: Scaling** | Documentation & Contributor guide | Developer Docs & Migration Guide | ⏳ NOT STARTED |
@@ -26,7 +26,7 @@
   * Initial commit with `README.md` and `TASKS.md`.
   * Add GitHub remote and push `main` branch.
 * **Local Dev Linking:**
-  * `stellarkit-site/package.json` references `@stellarkit/core` via `file:../stellarkit-core`.
+  * `stellarkit-site/package.json` references `@stellar-kit/core` via `file:../stellarkit-core`.
   * Run `pnpm install` in `stellarkit-site` after `stellarkit-core` has a valid `package.json`.
 
 ✅ **Status:** Both repos initialized on GitHub, local dev linking verified.
@@ -35,7 +35,7 @@
 
 ### **Phase 1: The Core Package (stellarkit-core)** ✅ COMPLETE
 
-The goal is to build a versioned npm package (`@stellarkit/core`) that sites install as an Astro Integration with exported components and utilities.
+The goal is to build a versioned npm package (`@stellar-kit/core`) that sites install as an Astro Integration with exported components and utilities.
 
 * **Infrastructure Setup:** ✅
   * TypeScript-first repository configured with `tsup`.  
@@ -49,13 +49,13 @@ The goal is to build a versioned npm package (`@stellarkit/core`) that sites ins
   * `defineSeo()`: Schema validation for SEO metadata.  
   * GTM Integration: Astro Integration hook for conditional GTM script injection.
 
-✅ **Status:** Published as `@stellarkit/core@0.1.0`. Build passes with zero type errors.  
+✅ **Status:** Published as `@stellar-kit/core@0.1.0`. Build passes with zero type errors.  
 ### **Phase 2: Site Implementation (stellarkit-site)** ✅ MOSTLY COMPLETE
 
 This serves as the blueprint for all future marketing sites.
 
 * **Dependency Integration:** ✅
-  * `@stellarkit/core` installed via `file:../stellarkit-core` in local development.  
+  * `@stellar-kit/core` installed via `file:../stellarkit-core` in local development.  
 * **Route Definition:** ✅
   * `src/pages/index.astro` and `src/pages/about.astro` created.  
   * Page-level metadata implemented with `defineSeo()`.  
@@ -108,7 +108,7 @@ Automated testing, versioning, and deployment workflows configured.
     forms.ts  
     seo.ts  
   index.ts (Entry point — Astro Integration)  
-package.json (name: @stellarkit/core)
+package.json (name: @stellar-kit/core)
 
 ### **Site Repository (stellarkit-site)**
 
@@ -120,7 +120,7 @@ package.json (name: @stellarkit/core)
     index.astro (Uses Core's BaseLayout)  
   /styles  
     global.css (Site-specific branding)  
-package.json (dependency: @stellarkit/core via file:../stellarkit-core)  
+package.json (dependency: @stellar-kit/core via file:../stellarkit-core)  
 astro.config.mjs
 
 ## **4\. CI/CD Workflow Detail**

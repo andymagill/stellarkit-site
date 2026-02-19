@@ -2,13 +2,13 @@
 
 ## Phase 2: Site Scaffold
 
-**Build this after Phase 1** — Requires @stellarkit/core to be initialized and available.
+**Build this after Phase 1** — Requires @stellar-kit/core to be initialized and available.
 
 ### 2.1 Scaffold and initialize
 - [x] Run `pnpm create astro@latest . -- --template minimal --typescript strict` in `stellarkit-site/`
-- [x] Update `package.json`: add `"@stellarkit/core": "file:../stellarkit-core"` to dependencies
-- [x] Add `astro.config.mjs` — import and register `stellarKitCore()` from `@stellarkit/core`, set `output: "static"`
-- [x] Run `pnpm install` and verify `@stellarkit/core` resolves from `file:` path
+- [x] Update `package.json`: add `"@stellar-kit/core": "file:../stellarkit-core"` to dependencies
+- [x] Add `astro.config.mjs` — import and register `stellarKitCore()` from `@stellar-kit/core`, set `output: "static"`
+- [x] Run `pnpm install` and verify `@stellar-kit/core` resolves from `file:` path
 
 ---
 
@@ -26,8 +26,8 @@
 ### 2.3 Pages
 
 - [x] Create `src/pages/index.astro`
-  - Import `BaseLayout` from `@stellarkit/core/src/layouts/BaseLayout.astro`
-  - Use `defineSeo()` from `@stellarkit/core/dist/utils/seo` for page metadata
+  - Import `BaseLayout` from `@stellar-kit/core/src/layouts/BaseLayout.astro`
+  - Use `defineSeo()` from `@stellar-kit/core/dist/utils/seo` for page metadata
   - Render `<Hero />` site component
 - [x] Create `src/pages/about.astro`
   - Same pattern as `index.astro`
@@ -38,7 +38,7 @@
 ### 2.4 Site Components
 
 - [x] Create `src/components/Hero.astro`
-  - Site-specific, no `@stellarkit/core` dependency
+  - Site-specific, no `@stellar-kit/core` dependency
   - Headline, subheadline, CTA button
 - [x] Create `src/components/FeatureGrid.astro`
   - Site-specific feature/benefit grid
@@ -53,7 +53,7 @@
 - [x] Create `src/styles/global.css` with:
   - `@import "tailwindcss"` — Single CSS directive for v4
   - `@theme { }` block for brand tokens (`--color-brand`, `--color-brand-dark`, `--color-text`, `--color-text-muted`)
-  - Site owns all styling; no styles from `@stellarkit/core`
+  - Site owns all styling; no styles from `@stellar-kit/core`
 - [x] Remove scoped `<style>` blocks from components — use Tailwind utilities in markup instead
 - [x] Replace inline `style=""` attributes with Tailwind utility classes
 - [x] Verify responsive design with Tailwind breakpoint prefixes (`sm:`, `md:`, `lg:`)
