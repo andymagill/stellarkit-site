@@ -1,0 +1,53 @@
+---
+import BaseLayout from '@stellarkit/core/src/layouts/BaseLayout.astro';
+import { defineSeo } from '@stellarkit/core/dist/utils/seo';
+import FeatureGrid from '../components/FeatureGrid.astro';
+import '../styles/global.css';
+
+const seoMeta = defineSeo({
+  title: 'About StellarKit | Reusable Marketing Infrastructure',
+  description:
+    'Learn how StellarKit separates infrastructure from implementation to prevent code fragmentation and long-term maintenance overhead.',
+  canonical: 'https://example.com/about',
+  ogImage: 'https://example.com/og-image-about.png',
+  ogType: 'website',
+  twitterHandle: '@stellarkit',
+});
+---
+
+<BaseLayout {...seoMeta}>
+  <section style="padding: 4rem 2rem; max-width: 800px; margin: 0 auto;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem;">About StellarKit</h1>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+      StellarKit is a reusable, open-source foundation for building marketing and product-validation sites using Astro.
+    </p>
+    
+    <h2 style="font-size: 1.8rem; margin: 2rem 0 1rem;">Our Mission</h2>
+    <p style="line-height: 1.8; margin-bottom: 1.5rem;">
+      We believe that marketing sites shouldn't be complex. StellarKit provides the infrastructure you need—SEO, analytics, forms, and performance—so you can focus on your content and brand.
+    </p>
+    
+    <h2 style="font-size: 1.8rem; margin: 2rem 0 1rem;">Why Separate Infrastructure?</h2>
+    <p style="line-height: 1.8;">
+      By separating infrastructure from implementation, StellarKit prevents code fragmentation, reduces repeated bug fixes, and ensures long-term maintainability. Each site stays lean and focused on its unique brand and content.
+    </p>
+  </section>
+  
+  <FeatureGrid
+    features={[
+      {
+        title: "Astro-Powered",
+        description: "Built on the modern Astro framework for optimal performance"
+      },
+      {
+        title: "SEO First",
+        description: "Strong SEO fundamentals built into the core"
+      },
+      {
+        title: "Flexible",
+        description: "Each site maintains full control over styling and content"
+      }
+    ]}
+  />
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@stellarkit/core/src/layouts/BaseLayout.astro';
+import { defineSeo } from '@stellarkit/core/dist/utils/seo';
+import Hero from '../components/Hero.astro';
+import FeatureGrid from '../components/FeatureGrid.astro';
+import '../styles/global.css';
+
+const seoMeta = defineSeo({
+  title: 'StellarKit | Build High-Converting Marketing Sites',
+  description:
+    'A reusable, open-source foundation for building marketing and product-validation sites with Astro.',
+  canonical: 'https://example.com/',
+  ogImage: 'https://example.com/og-image.png',
+  ogType: 'website',
+  twitterHandle: '@stellarkit',
+});
+---
+
+<BaseLayout {...seoMeta}>
+  <Hero
+    headline="Welcome to StellarKit"
+    subheadline="The foundation for building fast, SEO-optimized marketing sites with Astro."
+    ctaText="Explore Documentation"
+    ctaLink="/about"
+  />
+  <FeatureGrid />
+</BaseLayout>

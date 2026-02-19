@@ -1,0 +1,18 @@
+{
+  "name": "stellarkit-site",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Reference marketing site implementation for StellarKit",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@stellarkit/core": "file:../stellarkit-core",
+    "astro": "^5.17.1",
+    "typescript": "^5.9.3"
+  }
+}

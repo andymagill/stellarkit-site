@@ -1,0 +1,66 @@
+---
+interface Props {
+  headline?: string;
+  subheadline?: string;
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+const {
+  headline = "Build Amazing Marketing Sites",
+  subheadline = "Powered by StellarKit — the foundation for high-converting pages",
+  ctaText = "Get Started",
+  ctaLink = "#"
+} = Astro.props;
+---
+
+<section class="hero-section">
+  <div class="hero-container">
+    <h1 class="hero-headline">{headline}</h1>
+    <p class="hero-subheadline">{subheadline}</p>
+    <a href={ctaLink} class="hero-cta">{ctaText}</a>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+  }
+
+  .hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero-headline {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: bold;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-subheadline {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin: 0 0 2rem;
+    opacity: 0.95;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: white;
+    color: #667eea;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .hero-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+</style>
