@@ -12,8 +12,8 @@ importers:
         specifier: ^0.9.6
         version: 0.9.6(prettier@3.8.1)(typescript@5.9.3)
       '@stellarkit/core':
-        specifier: file:../stellarkit-core
-        version: file:../stellarkit-core(astro@5.17.3(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))
+        specifier: latest
+        version: 0.0.22(astro@5.17.3(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))
       astro:
         specifier: ^5.17.1
         version: 5.17.3(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
@@ -842,8 +842,8 @@ packages:
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
 
-  '@stellarkit/core@file:../stellarkit-core':
-    resolution: {directory: ../stellarkit-core, type: directory}
+  '@stellarkit/core@0.0.22':
+    resolution: {integrity: sha512-11w7LGFDPznFYOyKFzR6gVP9y8zr+emeSKzcRJjo2lYxzy6aaWhZ9p3JCRmyrAu/Zxu4vYJo18gufaXxvdgCCQ==}
     peerDependencies:
       astro: ^5.0.0
 
@@ -3465,7 +3465,7 @@ snapshots:
 
   '@shikijs/vscode-textmate@10.0.2': {}
 
-  '@stellarkit/core@file:../stellarkit-core(astro@5.17.3(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))':
+  '@stellarkit/core@0.0.22(astro@5.17.3(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2))':
     dependencies:
       astro: 5.17.3(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.2)
 

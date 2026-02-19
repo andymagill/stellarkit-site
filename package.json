@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "description": "Reference marketing site implementation for StellarKit",
   "scripts": {
+    "preinstall": "node setup.js",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -15,7 +16,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",
-    "@stellarkit/core": "file:../stellarkit-core",
+    "@stellarkit/core": "latest",
     "astro": "^5.17.1",
     "typescript": "^5.9.3"
   },
