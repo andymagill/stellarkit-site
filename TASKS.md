@@ -66,29 +66,48 @@
 
 ---
 
-## Phase 3: Deployment Automation ⏳ NOT STARTED
+## Phase 3: Deployment Automation ✅ MOSTLY COMPLETE
 
-### 3.1 Cloudflare Pages Configuration
+### 3.1 GitHub Actions: Site Build & Deploy ✅
+
+- [x] Create `.github/workflows/deploy.yml`
+  - On push/PR: Run `pnpm lint`, `astro check`, `pnpm build`
+  - On push to main: Run Lighthouse audit
+  - Pre-deployment checks and automated testing
+  - Tests on Node 18 and 20
+
+### 3.2 Lighthouse Performance Auditing ✅
+
+- [x] Create `lighthouserc.json` configuration
+  - Target: 95+ Performance and SEO scores
+  - Target: 90+ Best Practices and Accessibility
+  - Audit runs on main branch deployments
+
+### 3.3 Cloudflare Pages Configuration ⏳ MANUAL SETUP REQUIRED
 
 - [ ] Link GitHub repository to Cloudflare Pages
-- [ ] Configure build command: `pnpm build`
-- [ ] Set build output directory: `dist/`
-- [ ] Configure environment variables in Cloudflare dashboard:
-  - `PUBLIC_GTM_ID`
-  - `FORM_WEBHOOK_URL`
+  - Go to Cloudflare Dashboard → Pages → Create project
+  - Connect GitHub repository `andymagill/stellarkit-site`
+- [ ] Configure build settings:
+  - Build command: `pnpm build`
+  - Build output directory: `dist/`
+- [ ] Set environment variables in Cloudflare:
+  - `PUBLIC_GTM_ID` (your GTM ID)
+  - `FORM_WEBHOOK_URL` (your webhook endpoint)
+- [ ] Enable automatic deployments on push to main
 
-### 3.2 GitHub Actions: Site Build & Deploy
+### 3.4 Pre-Deployment Checks ✅
 
-- [ ] Create `.github/workflows/deploy.yml`
-  - On push to main: Run `pnpm lint`, `pnpm build`, deploy to Cloudflare
-  - On PR: Lint and build checks only (no deploy)
-  - Cloudflare automatic deployment integration
+- [x] `pnpm lint` in CI workflow
+- [x] `astro check` type validation in CI
+- [x] `pnpm build` pre-render check
+- [x] Lighthouse 95+ score configuration in place
 
-### 3.3 Pre-Deployment Checks
+### 3.5 Custom Domain Setup ⏳ OPTIONAL
 
-- [ ] Verify Lighthouse scores (95+ Performance, 95+ SEO)
-- [ ] Verify `astro check` passes
-- [ ] Verify all env vars are set
+- [ ] Configure custom domain in Cloudflare Pages
+- [ ] Point DNS records to Cloudflare
+- [ ] Enable SSL/TLS (automatic with Cloudflare)
 
 ---
 
