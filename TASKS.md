@@ -2,7 +2,9 @@
 
 ## Phase 2: Site Scaffold
 
-- [ ] Initialize `package.json`
+**Build this after Phase 1** — Requires @stellarkit/core to be initialized and available.
+
+### 2.1 Initialize package.json
   - `name`: `stellarkit-site`
   - `dependencies`: `{ "@stellarkit/core": "file:../stellarkit-core", "astro": "^5.0.0" }`
   - `scripts`: `dev`, `build`, `preview`
@@ -15,7 +17,7 @@
 
 ---
 
-## Phase 2: Environment
+### 2.2 Environment
 
 - [ ] Create `.env.example`
   ```
@@ -26,7 +28,7 @@
 
 ---
 
-## Phase 2: Pages
+### 2.3 Pages
 
 - [ ] Create `src/pages/index.astro`
   - Import `BaseLayout` from `@stellarkit/core/components/BaseLayout.astro`
@@ -38,7 +40,7 @@
 
 ---
 
-## Phase 2: Site Components
+### 2.4 Site Components
 
 - [ ] Create `src/components/Hero.astro`
   - Site-specific, no `@stellarkit/core` dependency
@@ -49,7 +51,7 @@
 
 ---
 
-## Phase 2: Styles
+### 2.5 Styles
 
 - [ ] Create `src/styles/global.css`
   - Site owns all CSS (no styles from `@stellarkit/core`)
@@ -58,7 +60,7 @@
 
 ---
 
-## Phase 2: Verification
+### 2.6 Verification
 
 - [ ] Run `npx astro check` — no type errors
 - [ ] Run `npm run dev` — site renders at `http://localhost:4321`
