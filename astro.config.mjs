@@ -9,5 +9,10 @@ export default defineConfig({
   integrations: [stellarKitCore()],
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      watch: {
+        ignored: ['**/*.md', '**/.changeset/**'],
+      },
+    },
   },
 });
