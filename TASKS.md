@@ -1,15 +1,5 @@
 # stellarkit-site — Implementation Tasks
 
-## Phase 0: Repository Setup
-
-- [ ] Run `git init` in `stellarkit-site/`
-- [ ] Create `.gitignore` (Node)
-- [ ] Initial commit with `README.md` and `TASKS.md`
-- [ ] Create `stellarkit-site` repository on GitHub
-- [ ] Add GitHub remote and push `main` branch
-
----
-
 ## Phase 2: Site Scaffold
 
 - [ ] Initialize `package.json`
