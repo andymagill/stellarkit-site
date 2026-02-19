@@ -46,12 +46,17 @@
 
 ---
 
-### 2.5 Styles
+### 2.5 Styles ✅ TAILWIND CSS V4
 
-- [x] Create `src/styles/global.css`
-  - Site owns all CSS (no styles from `@stellarkit/core`)
-  - CSS custom properties for brand colors and typography
-  - Base reset and body styles
+- [x] Install `tailwindcss` and `@tailwindcss/vite` as dev dependencies
+- [x] Register Tailwind Vite plugin in `astro.config.mjs`
+- [x] Create `src/styles/global.css` with:
+  - `@import "tailwindcss"` — Single CSS directive for v4
+  - `@theme { }` block for brand tokens (`--color-brand`, `--color-brand-dark`, `--color-text`, `--color-text-muted`)
+  - Site owns all styling; no styles from `@stellarkit/core`
+- [x] Remove scoped `<style>` blocks from components — use Tailwind utilities in markup instead
+- [x] Replace inline `style=""` attributes with Tailwind utility classes
+- [x] Verify responsive design with Tailwind breakpoint prefixes (`sm:`, `md:`, `lg:`)
 
 ---
 
@@ -148,13 +153,13 @@
 ### 5.1 Performance Improvements
 
 - [ ] Image optimization and lazy loading
-- [ ] CSS minification and critical path optimization
 - [ ] Font optimization (subsetting, variable fonts)
 - [ ] Caching strategies for static assets
+- [ ] CSS minification (handled automatically by Tailwind in production)
 
 ### 5.2 Additional Features
 
 - [ ] Newsletter signup form integration
 - [ ] Contact form with validation feedback
-- [ ] Dark mode support
+- [ ] Dark mode support via Tailwind's dark mode utilities
 - [ ] Multi-language support (i18n)

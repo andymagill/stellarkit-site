@@ -26,68 +26,16 @@ const {
 } = Astro.props;
 ---
 
-<section class="feature-grid-section">
-  <div class="feature-grid-container">
-    <h2 class="feature-grid-title">Why StellarKit?</h2>
-    <div class="feature-grid">
+<section class="py-16 px-8 bg-gray-50">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12 text-[var(--color-text)]">Why StellarKit?</h2>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
       {features.map((feature) => (
-        <div class="feature-card">
-          <h3 class="feature-title">{feature.title}</h3>
-          <p class="feature-description">{feature.description}</p>
+        <div class="bg-white p-8 rounded-xl shadow-sm transition-transform hover:-translate-y-1 hover:shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4 text-[var(--color-brand)]">{feature.title}</h3>
+          <p class="text-[var(--color-text-muted)] leading-relaxed">{feature.description}</p>
         </div>
       ))}
     </div>
   </div>
 </section>
-
-<style>
-  .feature-grid-section {
-    padding: 4rem 2rem;
-    background: #f8f9fa;
-  }
-
-  .feature-grid-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .feature-grid-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 0 0 3rem;
-    color: #2d3748;
-  }
-
-  .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .feature-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .feature-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0 0 1rem;
-    color: #667eea;
-  }
-
-  .feature-description {
-    margin: 0;
-    color: #4a5568;
-    line-height: 1.6;
-  }
-</style>
