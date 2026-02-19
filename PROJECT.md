@@ -21,7 +21,7 @@ It prioritizes:
 
 - Static pre-rendered output
 - Strong SEO fundamentals
-- Automated deployment to Cloudflare
+- Automated deployment to static hosting (Cloudflare Pages, Vercel, or Netlify)
 - Centralized analytics and form handling
 - Long-term maintainability
 
@@ -95,9 +95,9 @@ Each site deploys independently.
 
 ## Deployment
 
-- Cloudflare Pages
-- GitHub Actions or Cloudflare CI
-- Static site output
+- Static hosting platform (Cloudflare Pages, Vercel, or Netlify)
+- GitHub integration for automatic builds and deployments
+- Static site output (no server required)
 
 ---
 
@@ -123,9 +123,10 @@ Each site deploys independently.
 ## Forms ✅ IMPLEMENTED
 
 - Core provides form wrapper logic (`FormWrapper.astro`, `submitForm()` utility)
-- Site configures submission endpoint via `FORM_WEBHOOK_URL` environment variable
+- Each form configures submission endpoint via `webhookUrl` prop
 - No provider-specific SDK required
 - Form submission abstraction handles webhook POSTing
+- Configuration co-located with form (no environment variables)
 
 ---
 

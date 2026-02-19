@@ -94,16 +94,16 @@ The core package is referenced via `file:../stellarkit-core` in `package.json` f
 
 ## 🌐 Deploying
 
-This site is configured for automated deployment to **Cloudflare Pages**.
+This site is configured for automated deployment to **static hosting platforms** (Cloudflare Pages, Vercel, or Netlify).
 
 **Setup:**
-1. Link this repository to Cloudflare Pages
-2. Set environment variables:
+1. Link this repository to your hosting platform
+2. Set environment variable:
    - `PUBLIC_GTM_ID` — Google Tag Manager ID
-   - `FORM_WEBHOOK_URL` — Webhook endpoint for form submissions
-3. Cloudflare will auto-deploy on every push to main
+3. Forms configure their webhook endpoints directly via the `webhookUrl` prop
+4. Your platform will auto-deploy on every push to main
 
-See [PHASE_3_SETUP.md](../PHASE_3_SETUP.md) for detailed deployment instructions.
+See [SETUP.md](./SETUP.md) for detailed platform-specific deployment instructions.
 
 ---
 

@@ -17,7 +17,6 @@
 - [x] Create `.env.example`
   ```
   PUBLIC_GTM_ID=GTM-XXXX
-  FORM_WEBHOOK_URL=https://hooks.example.com/...
   ```
 - [x] Create `.env` (local only, git-ignored) with real values for development
 
@@ -88,18 +87,16 @@
   - Target: 90+ Best Practices and Accessibility
   - Audit runs on main branch deployments
 
-### 3.3 Cloudflare Pages Configuration ⏳ MANUAL SETUP REQUIRED
+### 3.3 Hosting Platform Setup ⏳ MANUAL SETUP REQUIRED
 
-- [ ] Link GitHub repository to Cloudflare Pages
-  - Go to Cloudflare Dashboard → Pages → Create project
-  - Connect GitHub repository `andymagill/stellarkit-site`
+- [ ] Connect GitHub repository to hosting platform (Cloudflare Pages, Vercel, or Netlify)
+  - See [SETUP.md](./SETUP.md) for platform-specific instructions
 - [ ] Configure build settings:
   - Build command: `pnpm build`
   - Build output directory: `dist/`
-- [ ] Set environment variables in Cloudflare:
+- [ ] Set environment variables in hosting platform dashboard:
   - `PUBLIC_GTM_ID` (your GTM ID)
-  - `FORM_WEBHOOK_URL` (your webhook endpoint)
-- [ ] Enable automatic deployments on push to main
+- [ ] Verify automatic deployment triggers on push to main
 
 ### 3.4 Pre-Deployment Checks ✅
 
@@ -110,9 +107,9 @@
 
 ### 3.5 Custom Domain Setup ⏳ OPTIONAL
 
-- [ ] Configure custom domain in Cloudflare Pages
-- [ ] Point DNS records to Cloudflare
-- [ ] Enable SSL/TLS (automatic with Cloudflare)
+- [ ] Configure custom domain in hosting platform
+- [ ] Point DNS records to hosting provider
+- [ ] Enable SSL/TLS (automatic with all platforms)
 
 ---
 
@@ -120,7 +117,7 @@
 
 ### 4.1 Site-Specific Documentation
 
-- [ ] Create `SETUP.md` — How to customize this site
+- [ ] Expand `SETUP.md` — How to customize and extend this site
   - Adding new pages
   - Modifying components
   - Updating branding (colors, typography)

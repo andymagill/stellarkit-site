@@ -88,10 +88,10 @@ Automated testing, versioning, and deployment workflows configured.
   * Automated audit runs on main branch deployments
 
 ⏳ **Pending Manual Setup:**
-  * Configure `NPM_TOKEN` secret in GitHub (stellarkit-core)
-  * Link stellarkit-site to Cloudflare Pages
-  * Set Cloudflare environment variables (`PUBLIC_GTM_ID`, `FORM_WEBHOOK_URL`)
-  * ✅ **See:** [PHASE_3_SETUP.md](PHASE_3_SETUP.md) for detailed instructions
+  * Bootstrap npm package namespace with `setup-npm-trusted-publish` (stellarkit-core)
+  * Configure OIDC trusted publishing in npm organization settings
+  * Connect stellarkit-site to hosting platform (Cloudflare Pages, Vercel, or Netlify)
+  * Set environment variables in hosting platform dashboard
 
 ## **3\. Repository Architecture**
 
@@ -138,21 +138,23 @@ astro.config.mjs
 - `.github/workflows/changesets.yml`: Manages version bumps
 - `.github/workflows/publish.yml`: Publishes to npm
 
-**Setup Required:** Configure `NPM_TOKEN` secret in GitHub Actions
+**Setup Required:** Bootstrap npm package and configure OIDC trusted publishing
 
-#### **Site Pipeline (Cloudflare Pages)** ✅
+See [stellarkit-core/SETUP.md](../stellarkit-core/SETUP.md) for complete setup instructions.
+
+#### **Site Pipeline (Cloudflare Pages / Vercel / Netlify)** ✅
 
 1. **Build:** Execute `pnpm build` (Astro Static Mode). ✅
-2. **Environment:** Inject GTM\_ID and FORM\_WEBHOOK\_URL via Cloudflare Dashboard variables. ⏳
-3. **Deploy:** Atomic deployment to Cloudflare Pages edge. ⏳
+2. **Environment:** Inject GTM_ID via hosting platform variables. ⏳
+3. **Form webhooks:** Configure per-form via `webhookUrl` prop on FormWrapper. ✅
 
 **Implementation:**
 - `.github/workflows/deploy.yml`: Pre-deployment checks and Lighthouse audit
 - `lighthouserc.json`: Performance and SEO verification
 
-**Setup Required:** Link repository to Cloudflare Pages and configure environment variables
+**Setup Required:** Connect repository to a static hosting platform (Cloudflare Pages, Vercel, or Netlify) and configure environment variables
 
-See [PHASE_3_SETUP.md](PHASE_3_SETUP.md) for complete setup instructions.
+See [SETUP.md](./SETUP.md) for complete setup instructions.
 
 ## **5\. Governance & Maintenance Rules**
 
