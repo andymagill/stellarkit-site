@@ -36,7 +36,7 @@ Secondary audience: open-source contributors
 
 ### 1️⃣ Core (Package Repository) ✅ COMPLETE
 
-A versioned, installable Astro package that provides shared infrastructure. **Published as `@stellar-kit/core@0.1.0`.**
+A versioned, installable Astro package that provides shared infrastructure. **Published as `@stellarkit/core@0.1.0`.**
 
 **Owns:**
 
@@ -217,11 +217,11 @@ No forking of core code.
 
 ## Local Development ✅ WORKING
 
-During local development, `stellarkit-site` references `@stellar-kit/core` via a `file:` path in its `package.json`:
+During local development, `stellarkit-site` references `@stellarkit/core` via a `file:` path in its `package.json`:
 
 ```json
 "dependencies": {
-  "@stellar-kit/core": "file:../stellarkit-core"
+  "@stellarkit/core": "file:../stellarkit-core"
 }
 ```
 

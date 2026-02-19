@@ -56,6 +56,7 @@ Choose one platform and follow its setup section below.
 ---
 
 ## Setup: Cloudflare Pages
+**IMPORTANT** These plaforms change and these instructions are likely wrong on several points. But this should serve as a guide with what you are trying to accomplish. Check official documentation for the correct process. 
 
 ### 1. Create Cloudflare Account
 
@@ -251,7 +252,7 @@ Specify the webhook URL directly on the `FormWrapper` component:
 ```astro
 ---
 // src/pages/contact.astro
-import FormWrapper from '@stellar-kit/core/components/FormWrapper.astro';
+import FormWrapper from '@stellarkit/core/components/FormWrapper.astro';
 ---
 
 <FormWrapper webhookUrl="https://hooks.example.com/contact">
@@ -270,7 +271,7 @@ Each form specifies its own webhook:
 ```astro
 ---
 // src/pages/multi-form.astro
-import FormWrapper from '@stellar-kit/core/components/FormWrapper.astro';
+import FormWrapper from '@stellarkit/core/components/FormWrapper.astro';
 ---
 
 <h2>Contact Us</h2>
