@@ -4,16 +4,11 @@
 
 **Build this after Phase 1** — Requires @stellarkit/core to be initialized and available.
 
-### 2.1 Initialize package.json
-  - `name`: `stellarkit-site`
-  - `dependencies`: `{ "@stellarkit/core": "file:../stellarkit-core", "astro": "^5.0.0" }`
-  - `scripts`: `dev`, `build`, `preview`
-- [ ] Add `astro.config.mjs`
-  - Import and register `stellarKitCore()` from `@stellarkit/core` in `integrations`
-  - Output: `static`
-- [ ] Add `tsconfig.json` (extends Astro's strict base config)
-- [ ] Install dependencies: `npm install`
-- [ ] Verify `@stellarkit/core` resolves correctly from `file:` path
+### 2.1 Scaffold and initialize
+- [ ] Run `pnpm create astro@latest . -- --template minimal --typescript strict` in `stellarkit-site/`
+- [ ] Update `package.json`: add `"@stellarkit/core": "file:../stellarkit-core"` to dependencies
+- [ ] Add `astro.config.mjs` — import and register `stellarKitCore()` from `@stellarkit/core`, set `output: "static"`
+- [ ] Run `pnpm install` and verify `@stellarkit/core` resolves from `file:` path
 
 ---
 
@@ -63,8 +58,8 @@
 ### 2.6 Verification
 
 - [ ] Run `npx astro check` — no type errors
-- [ ] Run `npm run dev` — site renders at `http://localhost:4321`
+- [ ] Run `pnpm dev` — site renders at `http://localhost:4321`
 - [ ] Confirm GTM `<script>` appears in page `<head>` (requires `PUBLIC_GTM_ID` in `.env`)
 - [ ] Confirm SEO meta tags render correctly in page source
-- [ ] Run `npm run build` — `dist/` produced with no errors
+- [ ] Run `pnpm build` — `dist/` produced with no errors
 - [ ] Run Lighthouse — 95+ score for Performance and SEO

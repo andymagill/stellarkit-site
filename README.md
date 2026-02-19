@@ -18,7 +18,7 @@ This repo is the starting point for any new StellarKit marketing or product-vali
 ## Prerequisites
 
 - Node ≥ 18.17.1
-- npm ≥ 9
+- pnpm ≥ 8
 
 ---
 
@@ -30,7 +30,7 @@ git clone https://github.com/your-org/stellarkit-site.git
 cd stellarkit-site
 
 # 2. Install dependencies
-npm install
+pnpm install
 ```
 
 ### How the core dependency works
@@ -43,7 +43,7 @@ npm install
 }
 ```
 
-This means `stellarkit-core` must be cloned as a sibling directory. After any changes to the core package, re-run `npm install` in this repo to pick them up.
+This means `stellarkit-core` must be cloned as a sibling directory. After any changes to the core package, re-run `pnpm install` in this repo to pick them up.
 
 ---
 
@@ -66,9 +66,9 @@ cp .env.example .env
 
 | Command | Action |
 | :--- | :--- |
-| `npm run dev` | Start local dev server at `http://localhost:4321` |
-| `npm run build` | Build static output to `dist/` |
-| `npm run preview` | Preview the production build locally |
+| `pnpm dev` | Start local dev server at `http://localhost:4321` |
+| `pnpm build` | Build static output to `dist/` |
+| `pnpm preview` | Preview the production build locally |
 | `npx astro check` | Run Astro type-checking |
 
 ---
@@ -114,7 +114,7 @@ const seo = defineSeo({
 ## Cloudflare Pages Deployment
 
 1. Connect the `stellarkit-site` GitHub repo in the Cloudflare Pages dashboard.
-2. Set build command: `npm run build`
+2. Set build command: `pnpm build`
 3. Set output directory: `dist`
 4. Add environment variables in the Cloudflare dashboard:
    - `PUBLIC_GTM_ID`
