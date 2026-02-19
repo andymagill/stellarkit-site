@@ -15,13 +15,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          path: stellarkit-site
-
-      - uses: actions/checkout@v4
-        with:
-          repository: andymagill/stellarkit-core
-          path: stellarkit-core
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
@@ -33,22 +26,17 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
-          cache-dependency-path: stellarkit-site/pnpm-lock.yaml
 
       - name: Install dependencies
-        working-directory: stellarkit-site
         run: pnpm install
 
       - name: Lint
-        working-directory: stellarkit-site
         run: pnpm lint
 
       - name: Astro Check
-        working-directory: stellarkit-site
         run: npx astro check
 
       - name: Build
-        working-directory: stellarkit-site
         run: pnpm build
 
   lighthouse:
@@ -58,13 +46,6 @@ jobs:
     
     steps:
       - uses: actions/checkout@v4
-        with:
-          path: stellarkit-site
-
-      - uses: actions/checkout@v4
-        with:
-          repository: andymagill/stellarkit-core
-          path: stellarkit-core
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
@@ -76,14 +57,11 @@ jobs:
         with:
           node-version: 20
           cache: pnpm
-          cache-dependency-path: stellarkit-site/pnpm-lock.yaml
 
       - name: Install dependencies
-        working-directory: stellarkit-site
         run: pnpm install
 
       - name: Build
-        working-directory: stellarkit-site
         run: pnpm build
 
       - name: Run Lighthouse CI
@@ -91,5 +69,5 @@ jobs:
         with:
           uploadArtifacts: true
           temporaryPublicStorage: true
-          configPath: ./stellarkit-site/lighthouserc.json
+          configPath: ./lighthouserc.json
         continue-on-error: true
